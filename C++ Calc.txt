@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+
+int main(){
+
+    double first, second;
+    char op;
+    std::cout << "Enter your first number: ";
+    std::cin >> first;
+    std::cout << "Enter Operator: (+ -  * / ^): ";
+    std::cin >> op;
+    std::cout << "Enter second number: ";
+    std::cin >> second;
+    if(op != '-' && op != '*' && op != '/' && op != '^'){
+        std::cout << "Sum: " << first + second << std::endl;
+
+    }
+    else if(op != '+' && op != '*' && op != '/' && op != '^'){
+        std::cout << "Diff: " << first - second << std::endl;
+    }
+    else if(op != '+' && op != '-' && op != '/' && op != '^'){
+        std::cout << "Prod: " << first * second << std::endl;
+    }
+    else if(op != '+' && op != '-' && op != '*' && op != '^'){
+        std::cout << "Quot: " << first / second << std::endl;
+    }
+    else if(op != '+' && op != '-' && op != '*' && op != '/'){
+        std::cout << "Exp: " << first << "^" << second << " = " << pow(first, second);
+    }
+
+    return 0;
+}
